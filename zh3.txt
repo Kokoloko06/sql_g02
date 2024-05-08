@@ -1,0 +1,15 @@
+match (p:Person)-[:ACTED_IN]->(m:Movie)
+where m.released > 1960
+ return p.name AS név  , m.title AS cím , m.released AS kiadás_éve
+ order by m.released Desc
+
+
+
+
+match (p:Person)-[:ACTED_IN]->(m:Movie)
+where p.born > 1980
+return p.name,p.born, count(*)
+ 
+
+
+
